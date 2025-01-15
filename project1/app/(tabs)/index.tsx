@@ -1,13 +1,20 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { ImageBackground } from 'react-native'
-const icedCoffeeImage = require('../assets/images/iced-coffee.png');
+import { Link } from 'expo-router';
+import { Pressable } from 'react-native';
+const icedCoffeeImage = require('../../assets/images/iced-coffee.png');
 
 const index = () => {
   return (
     <View style={styles.container}>
       <ImageBackground source={icedCoffeeImage} resizeMode='cover' style={styles.image}>
       <Text style={styles.text}>Heloo World</Text>
+      <Link href="/contact" asChild>
+        <Pressable>
+          <Text style={styles.text}>Contact</Text>
+        </Pressable>
+      </Link>
       </ImageBackground>
     </View>
   )
