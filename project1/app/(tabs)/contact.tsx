@@ -1,4 +1,4 @@
-import { View, Text, Modal, Button, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Modal, Button, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
 import React, { useState } from 'react';
 
 const Contact = () => {
@@ -6,6 +6,7 @@ const Contact = () => {
 
   return (
     <View style={styles.container}>
+          <StatusBar backgroundColor={'green'} ></StatusBar>
       <Text style={styles.title}>Contact Us</Text>
       <TouchableOpacity
         style={styles.openButton}
